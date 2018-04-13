@@ -30,6 +30,10 @@ use 5.006;
 use strict;
 use warnings;
 use Readonly;
+use Exporter::Lite;
+
+our @EXPORT = ();
+our @EXPORT_OK = qw( is_eu_state is_gdpr_state is_eea_state has_data_retention_regulations );
 
 Readonly our %EEA_STATES => (
               # Taken from https://en.wikipedia.org/wiki/European_Economic_Area
