@@ -165,6 +165,7 @@ sub has_data_retention_regulations {
 
 sub _normalize_state {
     my ($cc) = @_;
+    $cc ||= '';
     $cc =~ s/\s//g;
     $cc = uc($cc);
     if ( $cc eq 'GB' ) { return 'UK' }
